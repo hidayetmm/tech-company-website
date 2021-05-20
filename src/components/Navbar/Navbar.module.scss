@@ -1,0 +1,49 @@
+.header {
+  background: white;
+  padding: 0 200px;
+  height: 100px;
+  line-height: 100px;
+}
+
+.logoDiv {
+  float: left;
+  width: auto;
+  height: auto;
+}
+
+.logo {
+  /* float: left; */
+  width: 140px;
+  height: auto;
+  /*
+  margin: 16px 24px 16px 0;
+  margin: auto;
+  align-self: center; */
+}
+
+.navMenu {
+  float: right;
+}
+
+.layout {
+  background-color: white;
+  padding: 1rem 0;
+}
+
+.services {
+  text-align: center;
+  display: flex;
+  width: 35rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.serviceLink {
+  h5 {
+    width: 12rem;
+    transition: color 0.25s ease-in-out;
+    &:hover {
+      color: #06f;
+    }
+  }
+}
