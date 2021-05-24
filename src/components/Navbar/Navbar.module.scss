@@ -1,6 +1,6 @@
 .header {
   background: white;
-  padding: 0 200px;
+  padding: 0 12rem;
   height: 100px;
   line-height: 100px;
 }
@@ -26,8 +26,7 @@
 }
 
 .layout {
-  background-color: white;
-  padding: 1rem 0;
+  flex: none;
 }
 
 .services {

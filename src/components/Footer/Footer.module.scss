@@ -1,0 +1,29 @@
+.layout {
+  flex-shrink: 0;
+  /* height: 50px;
+    line-height: 50px; */
+  text-align: center;
+  height: 100px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rem 12rem;
+  background: #202020;
+
+  .title {
+    color: #fff;
+    font-weight: 700;
+    font-size: larger;
+    margin-bottom: 1.5em;
+  }
+
+  .bottomText {
+    color: #ababab;
+    transition: color 0.3s ease;
+    &:hover {
+      color: #fff;
+    }
+  }
+}

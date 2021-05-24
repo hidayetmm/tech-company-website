@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { Layout, Typography, Button, Row, Col, Divider, Space } from "antd";
+import { Layout, Typography, Button, Row, Col, Divider, Grid } from "antd";
 import classes from "./Home.module.scss";
+
 import { useTranslation } from "react-i18next";
 
 import TechStack from "./TechStack/TechStack";
+import IntroMenu from "./IntroMenu/IntroMenu";
 const { Footer, Content } = Layout;
 const { Title, Paragraph } = Typography;
+
+const { useBreakpoint } = Grid;
 
 const Home = () => {
   const { t } = useTranslation();
 
-  const [intro, setIntro] = useState("1");
+  const { xxl, xl, lg } = useBreakpoint();
 
   return (
     <Layout className={classes.layout}>
@@ -28,24 +32,7 @@ const Home = () => {
             </Button>
           </Col>
         </Row>
-        <Row className={classes.mainText}>
-          <Col span={16} offset={4}>
-            <Space className={classes.introMenu}>
-              <div className={classes.introMenuItem}>
-                <Title level={4}>Startups</Title>
-                <Divider className={classes.introDivider1} />
-              </div>
-              <div className={classes.introMenuItem}>
-                <Title level={4}>Enterprise</Title>
-                <Divider className={classes.introDivider2} />
-              </div>
-              <div className={classes.introMenuItem}>
-                <Title level={4}>SMB</Title>
-                <Divider className={classes.introDivider3} />
-              </div>
-            </Space>
-          </Col>
-        </Row>
+        <IntroMenu />
       </Content>
       {/* SERVICES INTRO */}
       <Content className={`${classes.content} ${classes.bg}`}>
@@ -75,21 +62,21 @@ const Home = () => {
               to="/services/custom-software-development"
             >
               <Title className={classes.service}>
-                {t("home.services.custom")}
+                {t("home.services.custom-software-development")}
               </Title>
             </Link>
             <Paragraph className={classes.serviceParagraph}>
-              {t("home.services.custom.paragraph")}
+              {t("home.services.custom-software-development.paragraph")}
             </Paragraph>
           </Col>
           {/* ENTERPRISE SOFTWARE DEVELOPMENT */}
           <Col span={8}>
             <Link
               className={classes.serviceLink}
-              to="/services/custom-software-development"
+              to="/services/enterprise-product-development"
             >
               <Title className={classes.service}>
-                {t("home.services.enterprise")}
+                {t("home.services.enterprise-product-development")}
               </Title>
             </Link>
 
@@ -97,7 +84,7 @@ const Home = () => {
               ellipsis={{ rows: 7, expandable: true, symbol: t("more") }}
               className={classes.serviceParagraph}
             >
-              {t("home.services.enterprise.paragraph")}
+              {t("home.services.enterprise-product-development.paragraph")}
             </Paragraph>
           </Col>
           <Col span={4}></Col>
@@ -108,14 +95,14 @@ const Home = () => {
           <Col span={8}>
             <Link
               className={classes.serviceLink}
-              to="/services/custom-software-development"
+              to="/services/web-application-development"
             >
               <Title className={classes.service}>
-                {t("home.services.web")}
+                {t("home.services.web-application-development")}
               </Title>
             </Link>
             <Paragraph className={classes.serviceParagraph}>
-              {t("home.services.web.paragraph")}
+              {t("home.services.web-application-development.paragraph")}
             </Paragraph>
           </Col>
           {/* MOBILE APPLICATION DEVELOPMENT */}
@@ -123,10 +110,10 @@ const Home = () => {
           <Col span={8}>
             <Link
               className={classes.serviceLink}
-              to="/services/custom-software-development"
+              to="/services/mobile-application-development"
             >
               <Title className={classes.service}>
-                {t("home.services.mobile")}
+                {t("home.services.mobile-application-development")}
               </Title>
             </Link>
 
@@ -134,7 +121,7 @@ const Home = () => {
               ellipsis={{ rows: 7, expandable: true, symbol: t("more") }}
               className={classes.serviceParagraph}
             >
-              {t("home.services.mobile.paragraph")}
+              {t("home.services.mobile-application-development.paragraph")}
             </Paragraph>
           </Col>
           <Col span={4}></Col>
@@ -145,10 +132,10 @@ const Home = () => {
           <Col span={8}>
             <Link
               className={classes.serviceLink}
-              to="/services/custom-software-development"
+              to="/services/business-technology-development"
             >
               <Title className={classes.service}>
-                {t("home.services.business")}
+                {t("home.services.business-technology-development")}
               </Title>
             </Link>
 
@@ -156,17 +143,17 @@ const Home = () => {
               ellipsis={{ rows: 7, expandable: true, symbol: t("more") }}
               className={classes.serviceParagraph}
             >
-              {t("home.services.business.paragraph")}
+              {t("home.services.business-technology-development.paragraph")}
             </Paragraph>
           </Col>
           {/* ARTIFICIAL INTELLIGENCE & MACHINE LEARNING */}
           <Col span={8}>
             <Link
               className={classes.serviceLink}
-              to="/services/custom-software-development"
+              to="/services/artificial-intelligence-machine-learning"
             >
               <Title className={classes.service}>
-                {t("home.services.artificial")}
+                {t("home.services.artificial-intelligence-machine-learning")}
               </Title>
             </Link>
 
@@ -174,15 +161,15 @@ const Home = () => {
               ellipsis={{ rows: 7, expandable: true, symbol: t("more") }}
               className={classes.serviceParagraph}
             >
-              {t("home.services.artificial.paragraph")}
+              {t(
+                "home.services.artificial-intelligence-machine-learning.paragraph"
+              )}
             </Paragraph>
           </Col>
           <Col span={4}></Col>
         </Row>
       </Content>
       <TechStack />
-
-      <Footer className={classes.footer}>Footer</Footer>
     </Layout>
   );
 };

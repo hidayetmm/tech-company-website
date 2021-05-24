@@ -1,37 +1,26 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Layout, Typography, Button, Row, Col, Divider, Space } from "antd";
 
-import classes from "./ServicePage.module.scss";
+import classes from "./MobileDevelopment.module.scss";
 import { useTranslation } from "react-i18next";
 
 const { Footer, Content } = Layout;
 const { Title, Paragraph } = Typography;
 
-const ServicePage = () => {
+const MobileDevelopment = () => {
   const { t } = useTranslation();
-  let { slug } = useParams();
-  if (!slug) {
-    slug = "custom-software-development";
-  }
 
   return (
     <Layout className={classes.layout}>
       <Content className={classes.content}>
         <Row className={classes.mainText}>
           <Col span={16} offset={3}>
-            <Title className={classes.title}>
-              {t(`home.services.${slug}`)}
-            </Title>
+            <Title className={classes.title}>Custom Software Development</Title>
             <Paragraph className={classes.paragraph}>
-              {t(`home.services.${slug}.paragraph`)}
+              {t("home.welcome2")}
             </Paragraph>
-            <Button
-              style={{ marginTop: "1rem" }}
-              size="large"
-              type="primary"
-              shape="round"
-            >
+            <Button size="large" type="primary" shape="round">
               {t("home.welcome3")}
             </Button>
           </Col>
@@ -47,34 +36,34 @@ const ServicePage = () => {
             <Space size="small">
               <Link
                 className={classes.serviceLink}
-                to="/services/web-application-development"
+                to="/services/custom-software-development"
               >
                 <Title level={4} className={classes.service}>
-                  {t("home.services.web-application-development")}
+                  {t("home.services.web")}
                 </Title>
               </Link>
               <Link
                 className={classes.serviceLink}
-                to="/services/mobile-application-development"
+                to="/services/custom-software-development"
               >
                 <Title level={4} className={classes.service}>
-                  {t("home.services.mobile-application-development")}
+                  {t("home.services.mobile")}
                 </Title>
               </Link>
               <Link
                 className={classes.serviceLink}
-                to="/services/business-technology-development"
+                to="/services/custom-software-development"
               >
                 <Title level={4} className={classes.service}>
-                  {t("home.services.business-technology-development")}
+                  {t("home.services.business")}
                 </Title>
               </Link>
               <Link
                 className={classes.serviceLink}
-                to="/services/artificial-intelligence-machine-learning"
+                to="/services/custom-software-development"
               >
                 <Title level={4} className={classes.service}>
-                  {t("home.services.artificial-intelligence-machine-learning")}
+                  {t("home.services.artificial")}
                 </Title>
               </Link>
             </Space>
@@ -85,4 +74,4 @@ const ServicePage = () => {
   );
 };
 
-export default ServicePage;
+export default MobileDevelopment;

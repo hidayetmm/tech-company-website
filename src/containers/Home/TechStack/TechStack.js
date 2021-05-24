@@ -48,8 +48,8 @@ const TechStack = () => {
         className={classes.mainText}
       >
         {/* WEB DEVELOPMENT */}
-        <Col span={3}></Col>
-        <Col lg={{ span: 10 }} md={{ span: 10 }}>
+        <Col xxl={4} xl={2}></Col>
+        <Col xxl={8} xl={10}>
           <div
             onClick={() => setisWebDevEnabled(true)}
             className={isWebDevEnabled ? classes.blue : classes.stackButtons}
@@ -61,7 +61,7 @@ const TechStack = () => {
             </Title>
           </div>
         </Col>
-        <Col lg={{ span: 7, offset: 1 }} md={{ span: 7, offset: 1 }}>
+        <Col xxl={{ span: 7, offset: 1 }} xl={{ span: 9, offset: 1 }}>
           <Title level={3} className={classes.service}>
             {isWebDevEnabled ? "Front end" : "Languages"}
           </Title>
@@ -134,10 +134,10 @@ const TechStack = () => {
             </div>
           )}
         </Col>
-        <Col span={3}></Col>
+        <Col xxl={4} xl={2}></Col>
         {/* CUSTOM SOFTWARE DEVELOPMENT */}
-        <Col span={3}></Col>
-        <Col lg={{ span: 10 }} md={{ span: 10 }}>
+        <Col xxl={4} xl={2}></Col>
+        <Col xxl={8} xl={10}>
           <div
             onClick={() => setisWebDevEnabled(false)}
             className={!isWebDevEnabled ? classes.blue : classes.stackButtons}
@@ -149,7 +149,7 @@ const TechStack = () => {
             </Title>
           </div>
         </Col>
-        <Col lg={{ span: 7, offset: 1 }} md={{ span: 7, offset: 1 }}>
+        <Col xxl={{ span: 7, offset: 1 }} xl={{ span: 9, offset: 1 }}>
           <Title level={3} className={classes.service}>
             {isWebDevEnabled ? "Back end" : "Frameworks"}
           </Title>
@@ -222,7 +222,7 @@ const TechStack = () => {
             </div>
           )}
         </Col>
-        <Col span={3}></Col>
+        <Col xxl={4} xl={2}></Col>
       </Row>
     </Content>
   );

@@ -20,7 +20,7 @@ const Navbar = () => {
     setCurrent(e.key);
   };
   return (
-    <Layout>
+    <Layout className={classes.layout}>
       <Header className={classes.header}>
         <Link to="/" className={classes.logoDiv}>
           <img className={classes.logo} src={logo} />
@@ -45,9 +45,9 @@ const Navbar = () => {
             <Menu.Item key="software">Software Testing as a Service</Menu.Item>
           </SubMenu> */}
           <Menu.Item key="services">
-            <Popover content={<Services />} placement="bottom">
-              <Link to="/services">Services</Link>
-            </Popover>
+            {/* <Popover content={<Services />} placement="bottom"> */}
+            <Link to="/services">Services</Link>
+            {/* </Popover> */}
           </Menu.Item>
           <SubMenu key="products" title="Products">
             <Menu.ItemGroup title="Item 1">

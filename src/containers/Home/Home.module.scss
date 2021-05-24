@@ -1,3 +1,6 @@
+$xxl: 1600px;
+$xl: 1200px;
+
 .layout {
   background: white;
   width: 100%;
@@ -25,8 +28,27 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  h2,
+  h4 {
+    font-weight: 750;
+  }
   .introMenuItem {
-    width: 15rem;
+    width: 16.5rem;
+    h4 {
+      font-weight: 800;
+    }
+    #startups {
+      color: #ff9933;
+    }
+    #enterprise {
+      color: #0265ff;
+    }
+    #smb {
+      color: #3cc55a;
+    }
+    @media screen and (min-width: $xxl) {
+      width: 25rem;
+    }
   }
   .introDivider1 {
     border-top: 5.5px solid #ff9933;
@@ -79,10 +101,13 @@
 
 .stackButtons {
   background-color: #f8f8fb;
-  padding: 50px;
+  padding: 2rem 0 2rem 2rem;
   cursor: pointer;
   border-radius: 1.125rem;
   transition: all 0.7s ease;
+  h1 {
+    padding-right: 3rem;
+  }
 }
 .blue {
   @extend .stackButtons;
@@ -116,8 +141,4 @@
     align-items: center;
     flex-shrink: 0;
   }
-}
-
-.footer {
-  background: #202020;
 }
