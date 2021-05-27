@@ -1,0 +1,41 @@
+$xl: 1200px;
+$xxl: 1600px;
+
+.main {
+  display: grid;
+  align-items: center;
+  height: calc(100vh - 100px);
+}
+
+.title1 {
+  font-size: 4.5rem !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+}
+
+.title2 {
+  @media (min-width: $xxl) {
+    width: 90%;
+  }
+}
+
+.form {
+  input {
+    // width: 17rem;
+    // margin-bottom: 16px;
+  }
+  .submit {
+    display: flex;
+    justify-content: space-between;
+    .submitParagraph {
+      color: gray;
+      #submitParagraphButton {
+        height: 0;
+        padding: 0;
+      }
+      @media (min-width: $xxl) {
+        width: 50%;
+      }
+    }
+  }
+}

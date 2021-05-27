@@ -26,7 +26,7 @@ const Footer = () => {
         <Space direction="vertical">
           {services.map((service, index) => (
             <Link>
-              <Title className={classes.bottomText} level={5} key={index}>
+              <Title className={classes.bottomText} level={5} key={service}>
                 {service}
               </Title>
             </Link>
@@ -41,7 +41,7 @@ const Footer = () => {
         <Space direction="vertical">
           {services.map((service, index) => (
             <Link>
-              <Title className={classes.bottomText} level={5} key={index}>
+              <Title className={classes.bottomText} level={5} key={service}>
                 {service}
               </Title>
             </Link>
@@ -55,8 +55,8 @@ const Footer = () => {
         </Title>
         <Space direction="vertical">
           {services.map((service, index) => (
-            <Link>
-              <Title className={classes.bottomText} level={5} key={index}>
+            <Link key={index}>
+              <Title className={classes.bottomText} level={5} key={service}>
                 {service}
               </Title>
             </Link>

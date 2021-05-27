@@ -54,10 +54,11 @@ const TechStack = () => {
             onClick={() => setisWebDevEnabled(true)}
             className={isWebDevEnabled ? classes.blue : classes.stackButtons}
           >
-            <Title className={classes.service}>Web Development Stack</Title>
+            <Title className={classes.service}>
+              {t("home.stack.web.title")}
+            </Title>
             <Title level={4} className={classes.serviceParagraph}>
-              We follow the latest development approaches and technologies to
-              build web applications that meet your requirements
+              {t("home.stack.web")}
             </Title>
           </div>
         </Col>
@@ -142,10 +143,11 @@ const TechStack = () => {
             onClick={() => setisWebDevEnabled(false)}
             className={!isWebDevEnabled ? classes.blue : classes.stackButtons}
           >
-            <Title className={classes.service}>Mobile Development Stack</Title>
+            <Title className={classes.service}>
+              {t("home.stack.mobile.title")}
+            </Title>
             <Title level={4} className={classes.serviceParagraph}>
-              Qscepter's mobile development department follows the latest tech
-              trends to create and future-proof your iOS or Android application.
+              {t("home.stack.mobile")}
             </Title>
           </div>
         </Col>

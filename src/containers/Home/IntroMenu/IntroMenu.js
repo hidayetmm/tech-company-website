@@ -25,53 +25,50 @@ const IntroMenu = () => {
     <Row className={classes.mainText}>
       <Col span={16} offset={4}>
         <Space className={classes.introMenu}>
-          <div
-            onMouseEnter={() => setIntro("1")}
-            className={classes.introMenuItem}
-          >
-            <Title id={classes.startups} level={4}>
-              Startups
-            </Title>
-            <Divider
-              className={`${classes.introDivider1} ${
-                intro === "1" ? classes.opacity : null
-              }`}
-            />
+          <div className={classes.introMenuItem}>
+            <div onMouseEnter={() => setIntro("1")}>
+              <Title id={classes.startups} level={4}>
+                Startups
+              </Title>
+              <Divider
+                className={`${classes.introDivider1} ${
+                  intro === "1" ? classes.opacity : null
+                }`}
+              />
+            </div>
           </div>
-          <div
-            onMouseEnter={() => setIntro("2")}
-            className={classes.introMenuItem}
-          >
-            <Title id={classes.enterprise} level={4}>
-              Enterprise
-            </Title>
-            <Divider
-              className={`${classes.introDivider2} ${
-                intro === "2" ? classes.opacity : null
-              }`}
-            />
+          <div className={classes.introMenuItem}>
+            <div onMouseEnter={() => setIntro("2")}>
+              <Title id={classes.enterprise} level={4}>
+                Enterprise
+              </Title>
+              <Divider
+                className={`${classes.introDivider2} ${
+                  intro === "2" ? classes.opacity : null
+                }`}
+              />
+            </div>
           </div>
-          <div
-            onMouseEnter={() => setIntro("3")}
-            className={classes.introMenuItem}
-          >
-            <Title id={classes.smb} level={4}>
-              SMB
-            </Title>
-            <Divider
-              className={`${classes.introDivider3} ${
-                intro === "3" ? classes.opacity : null
-              }`}
-            />
+          <div className={classes.introMenuItem}>
+            <div onMouseEnter={() => setIntro("3")}>
+              <Title id={classes.smb} level={4}>
+                SMB
+              </Title>
+              <Divider
+                className={`${classes.introDivider3} ${
+                  intro === "3" ? classes.opacity : null
+                }`}
+              />
+            </div>
           </div>
         </Space>
       </Col>
       <Col span={16} offset={4}>
         <Space className={classes.introMenu}>
-          <div onMouseEnter={() => setIntro("1")}>
+          <div>
             <Title level={xxl ? 2 : 4}>
               {intro === "1"
-                ? "Mobile App Development"
+                ? "Web Development"
                 : intro === "2"
                 ? "Technology consulting"
                 : "Digital transformation"}
@@ -89,10 +86,10 @@ const IntroMenu = () => {
           >
             •
           </Title>
-          <div onMouseEnter={() => setIntro("2")}>
+          <div>
             <Title level={xxl ? 2 : 4}>
               {intro === "1"
-                ? "Web development"
+                ? "Mobile development"
                 : intro === "2"
                 ? "Embedded teams"
                 : "Technology consulting"}
@@ -100,12 +97,17 @@ const IntroMenu = () => {
           </div>
           <Title
             style={{
-              color: intro === "1" ? "#ff9933" : intro === "2" ? "#0265ff" : "",
+              color:
+                intro === "1"
+                  ? "#ff9933"
+                  : intro === "2"
+                  ? "#0265ff"
+                  : "#3cc55a",
             }}
           >
             •
           </Title>
-          <div onMouseEnter={() => setIntro("3")}>
+          <div>
             <Title level={xxl ? 2 : 4}>
               {intro === "1"
                 ? "UI/UX Design"

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Layout, Typography, Button, Row, Col, Divider, Grid } from "antd";
 import classes from "./Home.module.scss";
@@ -16,6 +16,10 @@ const Home = () => {
   const { t } = useTranslation();
 
   const { xxl, xl, lg } = useBreakpoint();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Layout className={classes.layout}>

@@ -6,17 +6,22 @@ import Navbar from "./components/Navbar/Navbar";
 import ServicePage from "./components/ServicePage/ServicePage";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { useLocation } from "react-router-dom";
+import { Affix } from "antd";
+import Contact from "./containers/Contact/Contact";
 
 function App() {
   const location = useLocation();
   return (
     <div className="App">
-      <Navbar />
+      <Affix offsetTop={0}>
+        <Navbar />
+      </Affix>
 
       <TransitionGroup className="main">
-        <CSSTransition timeout={400} classNames="fade" key={location.key}>
+        <CSSTransition timeout={500} classNames="fade" key={location.key}>
           <Switch location={location}>
             <Route exact path="/services/:slug?" component={ServicePage} />
+            <Route exact path="/contact" component={Contact} />
             <Route exact path="/" component={Home} />
           </Switch>
         </CSSTransition>

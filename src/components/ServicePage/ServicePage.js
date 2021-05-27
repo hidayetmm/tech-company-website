@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Layout, Typography, Button, Row, Col, Divider, Space } from "antd";
+import { Layout, Typography, Button, Row, Col, Breadcrumb, Space } from "antd";
 
 import classes from "./ServicePage.module.scss";
 import { useTranslation } from "react-i18next";
@@ -15,8 +15,29 @@ const ServicePage = () => {
     slug = "custom-software-development";
   }
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Layout className={classes.layout}>
+      <Row className={classes.breadcrumb}>
+        <Col span={16} offset={3}>
+          <Breadcrumb separator=">">
+            <Breadcrumb.Item>
+              <Link to="/">Qscepter</Link>
+            </Breadcrumb.Item>
+            <Breadcrumb.Item href="">
+              <Link to="/services">{t(`services.servicesText`)}</Link>
+            </Breadcrumb.Item>
+            {slug !== "custom-software-development" ? (
+              <Breadcrumb.Item href="">
+                {t(`home.services.${slug}`)}
+              </Breadcrumb.Item>
+            ) : null}
+          </Breadcrumb>
+        </Col>
+      </Row>
       <Content className={classes.content}>
         <Row className={classes.mainText}>
           <Col span={16} offset={3}>

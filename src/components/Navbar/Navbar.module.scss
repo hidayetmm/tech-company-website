@@ -1,8 +1,9 @@
 .header {
-  background: white;
+  background: rgba($color: #fff, $alpha: 0.9);
   padding: 0 12rem;
   height: 100px;
   line-height: 100px;
+  backdrop-filter: blur(15px);
 }
 
 .logoDiv {
@@ -12,16 +13,12 @@
 }
 
 .logo {
-  /* float: left; */
   width: 140px;
   height: auto;
-  /*
-  margin: 16px 24px 16px 0;
-  margin: auto;
-  align-self: center; */
 }
 
 .navMenu {
+  background: transparent;
   float: right;
 }
 
