@@ -8,6 +8,8 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { useLocation } from "react-router-dom";
 import { Affix } from "antd";
 import Contact from "./containers/Contact/Contact";
+import PartnersClients from "./components/Navbar/PartnersClients/PartnersClients";
+import About from "./components/Navbar/About/About";
 
 function App() {
   const location = useLocation();
@@ -22,6 +24,8 @@ function App() {
           <Switch location={location}>
             <Route exact path="/services/:slug?" component={ServicePage} />
             <Route exact path="/contact" component={Contact} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/partners-clients" component={PartnersClients} />
             <Route exact path="/" component={Home} />
           </Switch>
         </CSSTransition>

@@ -4274,6 +4274,11 @@
   "resolved" "https://registry.npmjs.org/date-fns/-/date-fns-2.21.2.tgz"
   "version" "2.21.2"
 
+"dayjs@^1.8.30":
+  "integrity" "sha512-5s5IGuP5bVvIbOWkEDcfmXsUj24fZW1NMHVVSdSFF/kW8d+alZcI9SpBKC+baEyBe+z3fUp17y75ulstv5swUw=="
+  "resolved" "https://registry.npmjs.org/dayjs/-/dayjs-1.8.30.tgz"
+  "version" "1.8.30"
+
 "debug@^2.2.0":
   "integrity" "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA=="
   "resolved" "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz"
