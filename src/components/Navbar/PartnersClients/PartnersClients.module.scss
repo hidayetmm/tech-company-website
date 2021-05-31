@@ -1,0 +1,101 @@
+.layout {
+  background: white;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.breadcrumb {
+  padding-top: 5vh;
+}
+
+.content {
+  padding-top: 3vh;
+  padding-bottom: 10vh;
+}
+.bg {
+  background-color: #f8f8fb;
+}
+
+.mainText {
+  button {
+    font-weight: 800 !important;
+  }
+}
+
+.servicesText {
+  padding-top: 60px;
+  #servicesText {
+    color: gray;
+  }
+  h4 {
+    font-weight: 800;
+  }
+}
+
+.title {
+  font-size: 4.875rem !important;
+  font-weight: 800 !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gray {
+  @extend .title;
+  color: #bbb !important;
+  &:hover {
+    color: #aaa !important;
+  }
+}
+
+.service {
+  font-weight: 800 !important;
+  width: 15rem;
+}
+
+.serviceLink {
+  h4 {
+    transition: color 0.25s ease-in-out;
+    &:hover {
+      color: #06f;
+    }
+  }
+}
+
+.divider {
+  border-top: 3px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+.serviceParagraph {
+  width: 85%;
+}
+
+.paragraph {
+  font-size: 1.375rem;
+}
+
+.stackButtons {
+  background-color: #f8f8fb;
+  padding: 50px;
+  cursor: pointer;
+  border-radius: 1.125rem;
+  transition: all 0.7s ease;
+}
+.blue {
+  @extend .stackButtons;
+
+  h1,
+  h4 {
+    color: white;
+  }
+  background-color: #06f;
+}
+
+.clientPartner {
+  margin-bottom: 0 !important;
+}
+
+.clientParagraph {
+  margin: 1rem 0;
+  width: 80%;
+}

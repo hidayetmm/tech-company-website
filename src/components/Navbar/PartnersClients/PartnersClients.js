@@ -1,30 +1,88 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
+import { Layout, Typography, Button, Row, Col, Breadcrumb, Space } from "antd";
+
+import { clients } from "./clients";
+
+import classes from "./PartnersClients.module.scss";
+import { useTranslation } from "react-i18next";
+
+const { Content } = Layout;
+const { Title, Paragraph } = Typography;
 
 const PartnersClients = () => {
+  const [isSelected, setIsSelected] = useState("clients");
+  const { t } = useTranslation();
+  let { slug } = useParams();
+  if (!slug) {
+    slug = "custom-software-development";
+  }
+
+  //   useEffect(() => {
+  //     window.scrollTo(0, 0);
+  //   }, []);
+
   return (
     <div>
-      <h1>Clients</h1>
-      <div>
-        <h5>UIS (United International Services)</h5>
-        <h3>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </h3>
-      </div>
-      <h5>AzFiber NET</h5>
-      <h5>C141</h5>
-      <h5>GL</h5>
-      <h5>Makro Medicine</h5>
-      <h5>Titan Hydraulics</h5>
-      <h5>BS Group</h5>
-      <h5>Mediterranean Shipping Summit</h5>
-      <h5>CDC</h5>
-      <h5>Merkezi Gomruk Hospitali</h5>
+      <Layout className={classes.layout}>
+        <Row className={classes.breadcrumb}>
+          <Col span={16} offset={3}>
+            <Breadcrumb separator=">">
+              <Breadcrumb.Item>
+                <Link to="/">Qscepter</Link>
+              </Breadcrumb.Item>
+              <Breadcrumb.Item>
+                <Link to="/partners-clients">Partners/Clients</Link>
+              </Breadcrumb.Item>
+              {slug !== "custom-software-development" ? (
+                <Breadcrumb.Item>{t(`home.services.${slug}`)}</Breadcrumb.Item>
+              ) : null}
+            </Breadcrumb>
+          </Col>
+        </Row>
+        <Content className={classes.content}>
+          <Row className={classes.mainText}>
+            <Col span={16} offset={3}>
+              <Space>
+                <Title
+                  onClick={() => setIsSelected("clients")}
+                  className={
+                    isSelected === "clients" ? classes.title : classes.gray
+                  }
+                >
+                  Clients
+                </Title>
+                <Title className={classes.title}>&nbsp;/&nbsp;</Title>
+                <Title
+                  onClick={() => setIsSelected("partners")}
+                  className={
+                    isSelected === "partners" ? classes.title : classes.gray
+                  }
+                >
+                  Partners
+                </Title>
+              </Space>
+              <Paragraph className={classes.paragraph}>
+                {t(`home.services.${slug}.paragraph`)}
+              </Paragraph>
+            </Col>
+          </Row>
+
+          <Row gutter={[0, 70]} className={classes.servicesText}>
+            {clients.map((client) => (
+              <Col span={16} offset={3}>
+                <Space size="middle">
+                  <img width={45} src={client.src} />
+                  <Title className={classes.clientPartner}>{client.name}</Title>
+                </Space>
+                <Title className={classes.clientParagraph} level={5}>
+                  {t(`home.services.${slug}.paragraph`)}
+                </Title>
+              </Col>
+            ))}
+          </Row>
+        </Content>
+      </Layout>
     </div>
   );
 };
