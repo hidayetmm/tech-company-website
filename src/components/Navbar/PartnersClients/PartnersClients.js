@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Layout, Typography, Button, Row, Col, Breadcrumb, Space } from "antd";
 
-import { clients } from "./clients";
-
 import classes from "./PartnersClients.module.scss";
 import { useTranslation } from "react-i18next";
+import ClientsComponent from "./ClientsComponent";
+import PartnersComponent from "./PartnersComponent";
 
 const { Content } = Layout;
 const { Title, Paragraph } = Typography;
@@ -52,7 +52,9 @@ const PartnersClients = () => {
                 >
                   Clients
                 </Title>
-                <Title className={classes.title}>&nbsp;/&nbsp;</Title>
+                <Title style={{ color: "#bbb" }} className={classes.title}>
+                  &nbsp;/&nbsp;
+                </Title>
                 <Title
                   onClick={() => setIsSelected("partners")}
                   className={
@@ -67,20 +69,11 @@ const PartnersClients = () => {
               </Paragraph>
             </Col>
           </Row>
-
-          <Row gutter={[0, 70]} className={classes.servicesText}>
-            {clients.map((client) => (
-              <Col span={16} offset={3}>
-                <Space size="middle">
-                  <img width={45} src={client.src} />
-                  <Title className={classes.clientPartner}>{client.name}</Title>
-                </Space>
-                <Title className={classes.clientParagraph} level={5}>
-                  {t(`home.services.${slug}.paragraph`)}
-                </Title>
-              </Col>
-            ))}
-          </Row>
+          {isSelected === "clients" ? (
+            <ClientsComponent />
+          ) : (
+            <PartnersComponent />
+          )}
         </Content>
       </Layout>
     </div>
