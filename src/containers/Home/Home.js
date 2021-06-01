@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 import TechStack from "./TechStack/TechStack";
 import IntroMenu from "./IntroMenu/IntroMenu";
-const { Footer, Content } = Layout;
+const { Content } = Layout;
 const { Title, Paragraph } = Typography;
 
 const { useBreakpoint } = Grid;
@@ -69,9 +69,9 @@ const Home = () => {
                 {t("home.services.custom-software-development")}
               </Title>
             </Link>
-            <Paragraph className={classes.serviceParagraph}>
+            {/* <Paragraph className={classes.serviceParagraph}>
               {t("home.services.custom-software-development.paragraph")}
-            </Paragraph>
+            </Paragraph> */}
           </Col>
           {/* ENTERPRISE SOFTWARE DEVELOPMENT */}
           <Col span={8}>
@@ -84,12 +84,12 @@ const Home = () => {
               </Title>
             </Link>
 
-            <Paragraph
+            {/* <Paragraph
               ellipsis={{ rows: 7, expandable: true, symbol: t("more") }}
               className={classes.serviceParagraph}
             >
               {t("home.services.enterprise-product-development.paragraph")}
-            </Paragraph>
+            </Paragraph> */}
           </Col>
           <Col span={4}></Col>
         </Row>
@@ -105,9 +105,9 @@ const Home = () => {
                 {t("home.services.web-application-development")}
               </Title>
             </Link>
-            <Paragraph className={classes.serviceParagraph}>
+            {/* <Paragraph className={classes.serviceParagraph}>
               {t("home.services.web-application-development.paragraph")}
-            </Paragraph>
+            </Paragraph> */}
           </Col>
           {/* MOBILE APPLICATION DEVELOPMENT */}
 
@@ -121,12 +121,12 @@ const Home = () => {
               </Title>
             </Link>
 
-            <Paragraph
+            {/* <Paragraph
               ellipsis={{ rows: 7, expandable: true, symbol: t("more") }}
               className={classes.serviceParagraph}
             >
               {t("home.services.mobile-application-development.paragraph")}
-            </Paragraph>
+            </Paragraph> */}
           </Col>
           <Col span={4}></Col>
         </Row>
@@ -143,12 +143,12 @@ const Home = () => {
               </Title>
             </Link>
 
-            <Paragraph
+            {/* <Paragraph
               ellipsis={{ rows: 7, expandable: true, symbol: t("more") }}
               className={classes.serviceParagraph}
             >
               {t("home.services.business-technology-development.paragraph")}
-            </Paragraph>
+            </Paragraph> */}
           </Col>
           {/* ARTIFICIAL INTELLIGENCE & MACHINE LEARNING */}
           <Col span={8}>
@@ -161,14 +161,14 @@ const Home = () => {
               </Title>
             </Link>
 
-            <Paragraph
+            {/* <Paragraph
               ellipsis={{ rows: 7, expandable: true, symbol: t("more") }}
               className={classes.serviceParagraph}
             >
               {t(
                 "home.services.artificial-intelligence-machine-learning.paragraph"
               )}
-            </Paragraph>
+            </Paragraph> */}
           </Col>
           <Col span={4}></Col>
         </Row>

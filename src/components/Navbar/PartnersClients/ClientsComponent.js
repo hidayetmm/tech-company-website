@@ -13,7 +13,12 @@ const ClientsComponent = () => {
       {clients.map((client) => (
         <Col span={16} offset={3}>
           <Space size="middle">
-            <img width={45} src={client.src} />
+            <img
+              style={{ objectFit: "contain" }}
+              width={45}
+              height={45}
+              src={client.src}
+            />
             <Title className={classes.clientPartner}>{client.name}</Title>
           </Space>
           <Title className={classes.clientParagraph} level={5}>

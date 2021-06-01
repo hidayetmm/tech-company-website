@@ -50,7 +50,13 @@ const Contact = () => {
             Turan Business Centre, 3rd floor, Ahmad Rajabli, Nariman Narimanov,
             Baku, Azerbaijan
           </Paragraph>
-          <Text strong>+994 12 525 09 40, info@qscepter.com</Text>
+          <Text strong>
+            <a href="tel:+1-555-555-1212">+994 12 525 09 40,</a>
+            &nbsp;
+            <a href="mailto:info@qscepter.com" target="_blank">
+              info@qscepter.com
+            </a>
+          </Text>
         </Col>
         <Col xxl={{ span: 8, offset: 1 }} xl={{ span: 18, offset: 3 }}>
           <Form

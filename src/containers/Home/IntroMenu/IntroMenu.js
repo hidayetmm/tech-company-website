@@ -28,7 +28,7 @@ const IntroMenu = () => {
           <div className={classes.introMenuItem}>
             <div onMouseEnter={() => setIntro("1")}>
               <Title id={classes.startups} level={4}>
-                Startups
+                Software Development
               </Title>
               <Divider
                 className={`${classes.introDivider1} ${
@@ -40,7 +40,7 @@ const IntroMenu = () => {
           <div className={classes.introMenuItem}>
             <div onMouseEnter={() => setIntro("2")}>
               <Title id={classes.enterprise} level={4}>
-                Enterprise
+                IT Integration
               </Title>
               <Divider
                 className={`${classes.introDivider2} ${
@@ -52,7 +52,7 @@ const IntroMenu = () => {
           <div className={classes.introMenuItem}>
             <div onMouseEnter={() => setIntro("3")}>
               <Title id={classes.smb} level={4}>
-                SMB
+                Cyber Security
               </Title>
               <Divider
                 className={`${classes.introDivider3} ${

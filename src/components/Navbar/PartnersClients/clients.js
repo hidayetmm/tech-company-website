@@ -9,11 +9,18 @@ import medsummit from "../../../assets/medsummit.png";
 import cdc from "../../../assets/cdc.jpeg";
 import gomruk from "../../../assets/gomruk.png";
 import asb from "../../../assets/asb.png";
+import bp from "../../../assets/bp.png";
 
 export const clients = [
   {
     name: "United International Services",
     src: uis,
+    paragraph:
+      "Custom Software Development offers significant competitive advantage. It can help you in case you are looking for feature enhancement or you are trying to solve something from scratch which no one has done or achieved before. Depending on the magnitude of the problem you are trying to invent the solution which is hard to find in available software products.",
+  },
+  {
+    name: "BP",
+    src: bp,
     paragraph:
       "Custom Software Development offers significant competitive advantage. It can help you in case you are looking for feature enhancement or you are trying to solve something from scratch which no one has done or achieved before. Depending on the magnitude of the problem you are trying to invent the solution which is hard to find in available software products.",
   },

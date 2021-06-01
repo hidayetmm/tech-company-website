@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Layout, Typography, Button, Row, Col, Breadcrumb, Space } from "antd";
-
 import classes from "./PartnersClients.module.scss";
 import { useTranslation } from "react-i18next";
 import ClientsComponent from "./ClientsComponent";
@@ -18,9 +17,9 @@ const PartnersClients = () => {
     slug = "custom-software-development";
   }
 
-  //   useEffect(() => {
-  //     window.scrollTo(0, 0);
-  //   }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
@@ -52,9 +51,7 @@ const PartnersClients = () => {
                 >
                   Clients
                 </Title>
-                <Title style={{ color: "#bbb" }} className={classes.title}>
-                  &nbsp;/&nbsp;
-                </Title>
+                <Title className={classes.slash}>&nbsp;/&nbsp;</Title>
                 <Title
                   onClick={() => setIsSelected("partners")}
                   className={

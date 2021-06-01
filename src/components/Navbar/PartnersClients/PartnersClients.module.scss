@@ -40,6 +40,12 @@
   transition: all 0.2s ease;
 }
 
+.slash {
+  font-size: 4.875rem !important;
+  font-weight: 800 !important;
+  color: #bbb !important;
+}
+
 .gray {
   @extend .title;
   color: #bbb !important;
